@@ -102,7 +102,7 @@
            provideServices="true"
            remoteSystemTypeId="org.hphelion.hphelionserver"
            serverDisplayName="HP Helion "
-           serverTypeId="org.hphelion.appcloudserver.10"
+           serverTypeId="org.cloudfoundry.appcloudserver.10"
            wizardBanner="icons/wizban/wizban_cloudfoundry.png">
         <defaultUrl
               name="HP Helion Developer Platform"
@@ -127,9 +127,9 @@
     <extension
        point="org.eclipse.rse.core.systemTypes">
     <systemType
-          icon="icons/obj16/cloud_obj.png"
-          iconLive="icons/obj16/cloud_obj.png"
-          id="org.cloudfoundry.cloudfoundryserver"
+          icon="icons/obj16/hp_helion.png"
+          iconLive="icons/obj16/hp_helion.png"
+          id="org.cloudfoundry.appcloudserver.10"
           label="HPHelion"
           name="HP Helion"
           subsystemConfigurationIds="cloudserver.applications">
