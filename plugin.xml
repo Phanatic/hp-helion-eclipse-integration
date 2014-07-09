@@ -18,7 +18,7 @@
 			version="1.0" 
 			name="Cloud Foundry (Runtime) v1.0" 
 			description="Cloud Foundry supports J2EE 1.2, 1.3, 1.4 and Java EE 5 Web modules."
-			vendor="HP Helion" 
+			vendor="Hewlett Packard" 
 			class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryServerRuntime">
 			<moduleType types="wst.web" versions="1.0" />
 			<moduleType types="jst.web" versions="2.2,2.3,2.4,2.5,3.0" />
@@ -36,7 +36,7 @@
         hasConfiguration="false"
         id="org.cloudfoundry.appcloudserver.10"
         initialState="stopped"
-        name="HP Helion"
+        name="HP Helion Development Platform"
         runtime="true"
         runtimeTypeId="org.hphelion.appcloudserver.runtime.10"
         startTimeout="600000"
@@ -86,7 +86,7 @@
      <extension point="org.eclipse.wst.server.ui.serverImages">
 		<image 
 			id="org.cloudfoundry.appcloudserver" 
-			icon="icons/obj16/cloud_obj.png"
+			icon="icons/obj16/hp_helion.png"
 			typeIds="cloudfoundry.standalone.app, org.cloudfoundry.appcloudserver.10, org.cloudfoundry.appcloudserver.runtime.10" />
 	</extension>
 	<extension point="org.eclipse.wst.server.ui.wizardFragments">
@@ -98,10 +98,10 @@
 	 <extension
        point="org.cloudfoundry.ide.eclipse.server.core.branding">
 	    <service
-           name="HP Helion"
+           name="HP Helion Development Platform"
            provideServices="true"
            remoteSystemTypeId="org.hphelion.hphelionserver"
-           serverDisplayName="HP Helion "
+           serverDisplayName="HP Helion Development Platform"
            serverTypeId="org.cloudfoundry.appcloudserver.10"
            wizardBanner="icons/wizban/wizban_hphelion.jpg">
         <defaultUrl
@@ -109,19 +109,6 @@
               signupURL="https://horizon.hpcloud.com/register"
               url="https://api.15.126.226.248.xip.io">
         </defaultUrl>
-<!-- Renable when V2 MCF and local clouds are available
-        <cloudUrl
-              name="Microcloud"
-              url="http://api.mycloud.cloudfoundry.me">
-           <wildcard
-                 name="mycloud">
-           </wildcard>
-        </cloudUrl>
-        <cloudUrl
-              name="Local cloud"
-              url="http://api.vcap.me">
-        </cloudUrl>
-        -->
     </service>
      </extension>
     <extension
@@ -131,7 +118,7 @@
           iconLive="icons/obj16/hp_helion.png"
           id="org.cloudfoundry.appcloudserver.10"
           label="HPHelion"
-          name="HP Helion"
+          name="HP Helion Development Platform"
           subsystemConfigurationIds="cloudserver.applications">
     </systemType>
  </extension>
