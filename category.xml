@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/org.hphelion.eclipse.ide.branding.feature_1.0.0.qualifier.jar" id="org.hphelion.eclipse.ide.branding.feature" version="1.0.0.qualifier">
+      <category name="HewlettPackard"/>
+   </feature>
+   <category-def name="HewlettPackard" label="Hewlett Packard"/>
+</site>
