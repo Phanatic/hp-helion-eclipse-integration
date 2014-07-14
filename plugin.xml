@@ -86,7 +86,7 @@
      <extension point="org.eclipse.wst.server.ui.serverImages">
 		<image 
 			id="org.cloudfoundry.appcloudserver" 
-			icon="icons/obj16/hp_helion.png"
+			icon="icons/obj16/cloud_obj.png"
 			typeIds="cloudfoundry.standalone.app, org.cloudfoundry.appcloudserver.10, org.cloudfoundry.appcloudserver.runtime.10" />
 	</extension>
 	<extension point="org.eclipse.wst.server.ui.wizardFragments">
