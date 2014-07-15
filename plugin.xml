@@ -14,11 +14,11 @@
 -->
 <plugin>
 	<extension point="org.eclipse.wst.server.core.runtimeTypes">
-		<runtimeType id="org.cloudfoundry.appcloudserver.runtime.10"
+		<runtimeType id="org.hphelion.appcloudserver.runtime.10"
 			version="1.0" 
-			name="Cloud Foundry (Runtime) v1.0" 
-			description="Cloud Foundry supports J2EE 1.2, 1.3, 1.4 and Java EE 5 Web modules."
-			vendor="Pivotal" 
+			name="HP Helion (Runtime) v1.0" 
+			description="HP Helion supports J2EE 1.2, 1.3, 1.4 and Java EE 5 Web modules."
+			vendor="Hewlett Packard" 
 			class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryServerRuntime">
 			<moduleType types="wst.web" versions="1.0" />
 			<moduleType types="jst.web" versions="2.2,2.3,2.4,2.5,3.0" />
@@ -36,9 +36,9 @@
         hasConfiguration="false"
         id="org.hphelion.appcloudserver.10"
         initialState="stopped"
-        name="HP Helion"
+        name="HP Helion Development Platform"
         runtime="true"
-        runtimeTypeId="org.cloudfoundry.appcloudserver.runtime.10"
+        runtimeTypeId="org.hphelion.appcloudserver.runtime.10"
         startTimeout="600000"
         stopTimeout="60000"
         supportsRemoteHosts="true">
@@ -46,26 +46,26 @@
 	</extension>
 	<extension point="org.eclipse.wst.common.project.facet.core.defaultFacets">
     	<default-facets>
-      		<runtime-component id="org.cloudfoundry.appcloudserver"/>
+      		<runtime-component id="org.hphelion.appcloudserver"/>
         	<facet id="wst.jsdt.web" version="1.0"/>
     	</default-facets>
   	</extension>
   	<extension point="org.eclipse.wst.common.project.facet.core.runtimes">
-		<runtime-component-type id="org.cloudfoundry.appcloudserver" />
-		<runtime-component-version type="org.cloudfoundry.appcloudserver" version="1.0" />
+		<runtime-component-type id="org.hphelion.appcloudserver" />
+		<runtime-component-version type="org.hphelion.appcloudserver" version="1.0" />
 		
 		<adapter>
-			<runtime-component id="org.cloudfoundry.appcloudserver" />
+			<runtime-component id="org.hphelion.appcloudserver" />
 			<factory class="org.eclipse.jst.server.core.internal.RuntimeClasspathProvider$Factory" />
 			<type class="org.eclipse.jst.common.project.facet.core.IClasspathProvider" />
 		</adapter>
 		<adapter>
-	      <runtime-component id="org.cloudfoundry.appcloudserver"/>
+	      <runtime-component id="org.hphelion.appcloudserver"/>
 	      <factory class="org.eclipse.wst.server.ui.FacetRuntimeComponentLabelProvider"/>
 	      <type class="org.eclipse.wst.common.project.facet.ui.IRuntimeComponentLabelProvider"/>
 	    </adapter>
 		<supported>
-			<runtime-component id="org.cloudfoundry.appcloudserver" version="1.0" />
+			<runtime-component id="org.hphelion.appcloudserver" version="1.0" />
 			<facet id="jst.web" version="2.2,2.3,2.4,2.5,3.0" />
 			<facet id="jst.utility" version="1.0"/>
 			<facet id="grails.app" version="1.0"/>
@@ -74,20 +74,20 @@
 	</extension>
 	<extension point="org.eclipse.jst.server.core.runtimeFacetMappings">
 		<runtimeFacetMapping 
-			runtimeTypeId="org.cloudfoundry.appcloudserver.runtime.10"
-			runtime-component="org.cloudfoundry.appcloudserver" version="1.0" />
+			runtimeTypeId="org.hphelion.appcloudserver.runtime.10"
+			runtime-component="org.hphelion.appcloudserver" version="1.0" />
 	</extension>
 	<extension point="org.eclipse.jst.server.core.runtimeClasspathProviders">
 	     <runtimeClasspathProvider
-	        id="org.cloudfoundry.appcloudserver.classPathProvider"
-	        runtimeTypeIds="org.cloudfoundry.appcloudserver.runtime.10"
+	        id="org.hphelion.appcloudserver.classPathProvider"
+	        runtimeTypeIds="org.hphelion.appcloudserver.runtime.10"
 	        class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryRuntimeClasspathProvider"/>
      </extension>
      <extension point="org.eclipse.wst.server.ui.serverImages">
 		<image 
-			id="org.cloudfoundry.appcloudserver" 
+			id="org.hphelion.appcloudserver" 
 			icon="icons/obj16/cloud_obj.png"
-			typeIds="cloudfoundry.standalone.app, org.cloudfoundry.appcloudserver.10, org.cloudfoundry.appcloudserver.runtime.10" />
+			typeIds="cloudfoundry.standalone.app, org.hphelion.appcloudserver.10, org.cloudfoundry.appcloudserver.10, org.hphelion.appcloudserver.runtime.10, org.cloudfoundry.appcloudserver.runtime.10" />
 	</extension>
 	<extension point="org.eclipse.wst.server.ui.wizardFragments">
 		<fragment
@@ -98,10 +98,10 @@
 	 <extension
        point="org.cloudfoundry.ide.eclipse.server.core.branding">
 	    <service
-           name="HP Helion"
+           name="HP Helion Development Platform"
            provideServices="true"
            remoteSystemTypeId="org.hphelion.hphelionserver"
-           serverDisplayName="HP Helion "
+           serverDisplayName="HP Helion Development Platform"
            serverTypeId="org.hphelion.appcloudserver.10"
            wizardBanner="icons/wizban/wizban_hphelion.jpg">
         <defaultUrl
@@ -109,19 +109,6 @@
               signupURL="https://horizon.hpcloud.com/register"
               url="https://api.15.126.226.248.xip.io">
         </defaultUrl>
-<!-- Renable when V2 MCF and local clouds are available
-        <cloudUrl
-              name="Microcloud"
-              url="http://api.mycloud.cloudfoundry.me">
-           <wildcard
-                 name="mycloud">
-           </wildcard>
-        </cloudUrl>
-        <cloudUrl
-              name="Local cloud"
-              url="http://api.vcap.me">
-        </cloudUrl>
-        -->
     </service>
      </extension>
     <extension
@@ -131,9 +118,20 @@
           iconLive="icons/obj16/hp_helion.png"
           id="org.hphelion.appcloudserver.10"
           label="HPHelion"
-          name="HP Helion"
+          name="HP Helion Development Platform"
           subsystemConfigurationIds="cloudserver.applications">
     </systemType>
+ </extension>
+ 
+ <extension
+       point="org.eclipse.wst.server.ui.editorPages">
+    <page
+          class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryApplicationsEditorPage"
+          id="org.hphelion.ide.eclipse.server.editor.applications"
+          name="Applications and Services"
+          order="1"
+          typeIds="org.hphelion.appcloudserver.*">
+    </page>
  </extension>
 
 </plugin>
