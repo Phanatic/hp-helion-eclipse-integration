@@ -123,4 +123,15 @@
     </systemType>
  </extension>
  
+ <extension
+       point="org.eclipse.wst.server.ui.editorPages">
+    <page
+          class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryApplicationsEditorPage"
+          id="org.hphelion.ide.eclipse.server.editor.applications"
+          name="Applications and Services"
+          order="1"
+          typeIds="org.hphelion.appcloudserver.*">
+    </page>
+ </extension>
+
 </plugin>
