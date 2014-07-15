@@ -14,4 +14,7 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jst.server.core,
  org.eclipse.jst.common.project.facet.core,
  org.cloudfoundry.ide.eclipse.server.core,
- org.cloudfoundry.ide.eclipse.server.ui
+ org.cloudfoundry.ide.eclipse.server.ui,
+ org.cloudfoundry.ide.eclipse.server.branding;bundle-version="1.7.0",
+ org.cloudfoundry.ide.eclipse.server.rse;bundle-version="1.7.0",
+ org.cloudfoundry.ide.eclipse.server.standalone;bundle-version="1.7.0"
