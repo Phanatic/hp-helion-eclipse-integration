@@ -123,6 +123,7 @@
     </systemType>
  </extension>
  
+ <!--Extension point for additional tab pages in the properties of a server. -->
  <extension
        point="org.eclipse.wst.server.ui.editorPages">
     <page
@@ -133,5 +134,38 @@
           typeIds="org.hphelion.appcloudserver.*">
     </page>
  </extension>
-
+ <!-- This extension point provides a way to add additional sections into an existing server editor page that contains insertion points.
+ -->
+<extension point="org.eclipse.wst.server.ui.editorPageSections">
+		<section
+			id="org.cloudfoundry.ide.eclipse.server.editor.general"
+         	order="1"
+         	insertionId="org.eclipse.wst.server.editor.overview.left"
+         	typeIds="org.hphelion.appcloudserver.*"
+         	class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryAccountSection">
+      	</section>
+		<section
+			id="org.cloudfoundry.ide.eclipse.server.editor.status"
+         	order="2"
+         	insertionId="org.eclipse.wst.server.editor.overview.left"
+         	typeIds="org.hphelion.appcloudserver.*"
+         	class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryServerStatusSection">
+      	</section>
+   
+  <section
+        class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.DisablePublishSection"
+        id="org.cloudfoundry.ide.eclipse.server.editor.disable.publish"
+        insertionId="org.eclipse.wst.server.editor.overview.right"
+        order="1"
+        typeIds="org.hphelion.appcloudserver.*">
+  </section>
+    </extension>
+	<extension
+       point="org.eclipse.wst.server.core.launchableAdapters">
+    <launchableAdapter
+          class="org.cloudfoundry.ide.eclipse.server.ui.internal.CloudFoundryLaunchableAdapterDelegate"
+          id="org.cloudfoundry.ide.eclipse.server.launchableAdapter"
+          typeIds="org.hphelion.appcloudserver*">
+    </launchableAdapter>
+ </extension>
 </plugin>
