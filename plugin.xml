@@ -100,7 +100,7 @@
 	    <service
            name="HP Helion Development Platform"
            provideServices="true"
-           remoteSystemTypeId="org.hphelion.hphelionserver"
+           remoteSystemTypeId="org.hphelion.appcloudserver.10"
            serverDisplayName="HP Helion Development Platform"
            serverTypeId="org.hphelion.appcloudserver.10"
            wizardBanner="icons/wizban/wizban_hphelion.jpg">
