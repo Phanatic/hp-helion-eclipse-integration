@@ -2,29 +2,32 @@
 <?eclipse version="3.4"?>
 <!--
 /*******************************************************************************
- * Copyright (c) 2012, 2013 Pivotal Software, Inc.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *     Pivotal Software, Inc. - initial API and implementation
+ * Copyright 2014 Hewlett-Packard Development Company, L.P.
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *    http://www.apache.org/licenses/LICENSE-2.0
+
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
  *******************************************************************************/
 -->
 <plugin>
 	<extension point="org.eclipse.wst.server.core.runtimeTypes">
 		<runtimeType id="org.hphelion.appcloudserver.runtime.10"
-			version="1.0" 
-			name="HP Helion (Runtime) v1.0" 
-			description="HP Helion supports J2EE 1.2, 1.3, 1.4 and Java EE 5 Web modules."
-			vendor="Hewlett Packard" 
+			version="1.0"
+			name="HP Helion Development Platform (Runtime) v1.0"
+			description="HP Helion Development Platform supports J2EE 1.2, 1.3, 1.4 and Java EE 5 Web modules."
+			vendor="HP Helion Development Platform"
 			class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryServerRuntime">
 			<moduleType types="wst.web" versions="1.0" />
 			<moduleType types="jst.web" versions="2.2,2.3,2.4,2.5,3.0" />
 			<moduleType types="jst.utility" versions="1.0"/>
 			<moduleType types="grails.app" versions="1.0"/>
-            <moduleType types="cloudfoundry.standalone.app" versions="1.0"/> 
+            <moduleType types="cloudfoundry.standalone.app" versions="1.0"/>
 		</runtimeType>
 	</extension>
 
@@ -32,7 +35,7 @@
   <serverType
         behaviourClass="org.cloudfoundry.ide.eclipse.server.core.internal.client.CloudFoundryServerBehaviour"
         class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryServer"
-        description="Publishes and runs J2EE Web projects to HP Helion."
+        description="Publishes and runs J2EE Web projects to HP Helion Development Platform."
         hasConfiguration="false"
         id="org.hphelion.appcloudserver.10"
         initialState="stopped"
@@ -53,7 +56,7 @@
   	<extension point="org.eclipse.wst.common.project.facet.core.runtimes">
 		<runtime-component-type id="org.hphelion.appcloudserver" />
 		<runtime-component-version type="org.hphelion.appcloudserver" version="1.0" />
-		
+
 		<adapter>
 			<runtime-component id="org.hphelion.appcloudserver" />
 			<factory class="org.eclipse.jst.server.core.internal.RuntimeClasspathProvider$Factory" />
@@ -73,7 +76,7 @@
     	</supported>
 	</extension>
 	<extension point="org.eclipse.jst.server.core.runtimeFacetMappings">
-		<runtimeFacetMapping 
+		<runtimeFacetMapping
 			runtimeTypeId="org.hphelion.appcloudserver.runtime.10"
 			runtime-component="org.hphelion.appcloudserver" version="1.0" />
 	</extension>
@@ -84,8 +87,8 @@
 	        class="org.cloudfoundry.ide.eclipse.server.core.internal.CloudFoundryRuntimeClasspathProvider"/>
      </extension>
      <extension point="org.eclipse.wst.server.ui.serverImages">
-		<image 
-			id="org.hphelion.appcloudserver" 
+		<image
+			id="org.hphelion.appcloudserver"
 			icon="icons/obj16/cloud_obj.png"
 			typeIds="cloudfoundry.standalone.app, org.hphelion.appcloudserver.10, org.cloudfoundry.appcloudserver.10, org.hphelion.appcloudserver.runtime.10, org.cloudfoundry.appcloudserver.runtime.10" />
 	</extension>
@@ -122,7 +125,7 @@
           subsystemConfigurationIds="cloudserver.applications">
     </systemType>
  </extension>
- 
+
  <!--Extension point for additional tab pages in the properties of a server. -->
  <extension
        point="org.eclipse.wst.server.ui.editorPages">
@@ -138,26 +141,25 @@
  -->
 <extension point="org.eclipse.wst.server.ui.editorPageSections">
 		<section
-			id="org.cloudfoundry.ide.eclipse.server.editor.general"
+			id="org.hphelion.ide.eclipse.server.editor.general"
          	order="1"
          	insertionId="org.eclipse.wst.server.editor.overview.left"
          	typeIds="org.hphelion.appcloudserver.*"
          	class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryAccountSection">
       	</section>
 		<section
-			id="org.cloudfoundry.ide.eclipse.server.editor.status"
+			id="org.hphelion.ide.eclipse.server.editor.status"
          	order="2"
          	insertionId="org.eclipse.wst.server.editor.overview.left"
          	typeIds="org.hphelion.appcloudserver.*"
          	class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.CloudFoundryServerStatusSection">
       	</section>
-   
-  <section
-        class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.DisablePublishSection"
-        id="org.cloudfoundry.ide.eclipse.server.editor.disable.publish"
-        insertionId="org.eclipse.wst.server.editor.overview.right"
-        order="1"
-        typeIds="org.hphelion.appcloudserver.*">
+  		<section
+        	class="org.cloudfoundry.ide.eclipse.server.ui.internal.editor.DisablePublishSection"
+        	id="org.hphelion.ide.eclipse.server.editor.disable.publish"
+        	insertionId="org.eclipse.wst.server.editor.overview.right"
+        	order="1"
+        	typeIds="org.hphelion.appcloudserver.*">
   </section>
     </extension>
 	<extension

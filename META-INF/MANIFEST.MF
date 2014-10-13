@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: Hp Helion Integration for Eclipse
+Bundle-Name: HP Helion Development Platform Integration for Eclipse
 Bundle-SymbolicName: org.hphelion.ide.eclipse.server.branding;singleton:=true
-Bundle-Version: 1.7.0.qualifier
-Bundle-Vendor: Hewlett Packard Co.
+Bundle-Version: 1.0.0.0
+Bundle-Vendor: Hewlett Packard Development Co.
 Bundle-RequiredExecutionEnvironment: JavaSE-1.7
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.ui,
@@ -15,6 +15,6 @@ Require-Bundle: org.eclipse.ui,
  org.eclipse.jst.common.project.facet.core,
  org.cloudfoundry.ide.eclipse.server.core,
  org.cloudfoundry.ide.eclipse.server.ui,
- org.cloudfoundry.ide.eclipse.server.branding;bundle-version="1.7.0",
- org.cloudfoundry.ide.eclipse.server.rse;bundle-version="1.7.0",
- org.cloudfoundry.ide.eclipse.server.standalone;bundle-version="1.7.0"
+ org.cloudfoundry.ide.eclipse.server.branding,
+ org.cloudfoundry.ide.eclipse.server.rse,
+ org.cloudfoundry.ide.eclipse.server.standalone
