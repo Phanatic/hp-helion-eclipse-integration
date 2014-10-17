@@ -108,9 +108,9 @@
            serverTypeId="org.hphelion.appcloudserver.10"
            wizardBanner="icons/wizban/wizban_hphelion.jpg">
         <defaultUrl
-              name="HP Helion Developer Platform"
+              name="Sign up HP Helion Developement Platform"
               signupURL="https://horizon.hpcloud.com/register"
-              url="https://api.15.126.226.248.xip.io">
+              url="https://api.example.addyourown.com">
         </defaultUrl>
     </service>
      </extension>
